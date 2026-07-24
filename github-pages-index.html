@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雙北親子館活動篩選器</title>
+<style>
+  :root{
+    --ink:#2b2420;
+    --paper:#faf6ef;
+    --card:#ffffff;
+    --line:#e4dbcb;
+    --accent:#c9622e;
+    --accent-soft:#f3e2d3;
+    --good:#3f7a5c;
+    --blue:#3a6ea8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    padding-bottom:60px;
+  }
+  header{
+    padding:24px 20px 16px;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.14em;
+    color:var(--accent);
+    font-weight:700;
+    text-transform:uppercase;
+  }
+  h1{
+    margin:6px 0 4px;
+    font-size:24px;
+    font-weight:900;
+  }
+  .sub{
+    font-size:13.5px;
+    color:#6b6154;
+    line-height:1.6;
+    margin:0;
+  }
+  .status-bar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:10px;
+  }
+  .status-pill{
+    font-size:12px;
+    font-weight:700;
+    padding:5px 11px;
+    border-radius:99px;
+    background:var(--accent-soft);
+    color:var(--accent);
+  }
+  .status-pill.stale{
+    background:#fbeee0;
+    color:#b9752e;
+  }
+  .status-pill.coverage-low{
+    background:#f6e3e1;
+    color:#b0453a;
+  }
+  main{padding:16px 16px 0;}
+
+  .filter-block{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px;
+    margin-bottom:14px;
+  }
+  .filter-label{
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:8px;
+  }
+  .chip-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:14px;
+  }
+  .chip-row:last-child{margin-bottom:0;}
+  .chip{
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+    font-size:13px;
+    font-weight:700;
+    padding:6px 12px;
+    border-radius:99px;
+    cursor:pointer;
+  }
+  .chip.active{
+    background:var(--ink);
+    color:#fff;
+    border-color:var(--ink);
+  }
+  .age-display{
+    font-size:13px;
+    color:#6b6154;
+    margin-bottom:6px;
+  }
+  .age-display b{color:var(--accent);font-size:15px;}
+  input[type=range]{
+    width:100%;
+    accent-color:var(--accent);
+  }
+  .toggle-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:10px;
+    font-size:13px;
+    font-weight:600;
+  }
+  .toggle-row label{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    cursor:pointer;
+  }
+
+  .result-count{
+    font-size:13px;
+    color:#8a7f6f;
+    margin:16px 4px 10px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:10px;
+  }
+  .card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+  }
+  .aname{
+    font-size:16px;
+    font-weight:800;
+    line-height:1.4;
+  }
+  .meta{
+    font-size:12.5px;
+    color:#8a7f6f;
+    margin-top:4px;
+    line-height:1.6;
+  }
+  .badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:8px;
+  }
+  .badge{
+    font-size:11px;
+    font-weight:700;
+    padding:3px 9px;
+    border-radius:99px;
+    white-space:nowrap;
+  }
+  .badge.center{background:var(--accent-soft);color:var(--accent);}
+  .badge.method-net{background:#e3edf9;color:var(--blue);}
+  .badge.method-onsite{background:#e5f0e9;color:var(--good);}
+  .badge.method-phone{background:#fbeee0;color:#b9752e;}
+  .badge.adult{background:#eee5f6;color:#7a4fa3;}
+  .badge.reg{background:#fff4e0;color:#a06b1a;}
+  .date-tag{
+    text-align:right;
+    flex-shrink:0;
+  }
+  .date-num{
+    font-size:17px;
+    font-weight:900;
+    color:var(--ink);
+  }
+  .date-week{
+    font-size:11.5px;
+    color:#8a7f6f;
+  }
+  .empty{
+    text-align:center;
+    padding:40px 20px;
+    color:#8a7f6f;
+    font-size:14px;
+  }
+  details{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 16px;
+    margin-bottom:14px;
+  }
+  summary{
+    font-weight:800;
+    font-size:14px;
+    cursor:pointer;
+  }
+  textarea{
+    width:100%;
+    min-height:120px;
+    margin-top:10px;
+    font-family:monospace;
+    font-size:12px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:8px;
+    background:#fffdf9;
+  }
+  .btn{
+    border:none;
+    background:var(--ink);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    padding:9px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:10px;
+    margin-right:8px;
+  }
+  .btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);}
+  .btn.danger{background:#b0453a;}
+  .status-msg{
+    font-size:12.5px;
+    margin-top:8px;
+    color:var(--good);
+  }
+  .status-msg.error{color:#b0453a;}
+  .hint{
+    font-size:12px;
+    color:#8a7f6f;
+    line-height:1.6;
+    margin-top:6px;
+  }
+  footer{
+    padding:20px 20px 10px;
+    font-size:12px;
+    color:#8a7f6f;
+    line-height:1.7;
+    border-top:1px solid var(--line);
+    margin-top:20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Taipei &amp; New Taipei Parent-Child Centers</div>
+  <h1>雙北親子館活動篩選器</h1>
+  <p class="sub" id="subLine">選孩子年齡、星期幾，篩出適合報名的活動。</p>
+  <div class="status-bar">
+    <span class="status-pill" id="updatedPill">資料更新於：—</span>
+  </div>
+</header>
+
+<main>
+  <details>
+    <summary>ℹ️ 如何更新這份資料</summary>
+    <div class="hint">這個網站的活動資料存在同資料夾的 <code>data.json</code> 檔案裡。要更新資料，回到 GitHub 上編輯 <code>data.json</code>、貼上新內容、按 Commit 儲存即可，網站會在幾分鐘內自動更新，網址不會改變。</div>
+  </details>
+
+  <div class="filter-block">
+    <div class="filter-label">🏙️ 城市</div>
+    <div class="chip-row" id="cityChips"></div>
+
+    <div class="filter-label">👶 孩子年齡</div>
+    <div class="age-display">篩選年齡：<b id="ageOut">2歲</b></div>
+    <input type="range" id="ageSlider" min="0" max="84" value="24" step="1">
+    <div class="toggle-row">
+      <label><input type="checkbox" id="noAgeToggle"> 不限定年齡（顯示所有年齡層活動）</label>
+      <label><input type="checkbox" id="adultToggle"> 只看純大人活動</label>
+    </div>
+
+    <div class="filter-label" style="margin-top:16px;">📅 星期幾</div>
+    <div class="chip-row" id="weekdayChips"></div>
+
+    <div class="filter-label">🏛️ 館別</div>
+    <div class="chip-row" id="centerChips"></div>
+
+    <div class="filter-label">🎫 報名方式</div>
+    <div class="chip-row" id="methodChips"></div>
+  </div>
+
+  <div class="result-count" id="resultCount"></div>
+  <div id="results"></div>
+</main>
+
+<footer>
+  年齡篩選以「活動月份」計算月齡區間，「學齡前」統一以未滿6歲估算（新北市場館以來源資料月齡上限為準），實際仍以活動舉辦當天幼兒實際年齡為準。★網路預約／●現場抽籤／🟠電話報名。📅為台北市各館報名開放時間（固定日中午12:30開放，萬華、大安兩館依活動日期分兩批開放）；尚未收錄報名規則的館別會顯示「依當月公告為準」。<br><br>
+  🏙️ <b>新北市場館說明</b>：新北市親子館採全市統一報名時間——每月1日中午12:00公告下月行事曆，每月<b>15日中午12:00</b>開放下月活動報名（📅標籤已依此規則顯示）。線上報名成功後須於<b>報名後2-4個開館日內</b>完成繳費（現場或轉帳），逾期未繳視同放棄；同一會員60天內取消或逾期繳費累計達5次會被停權60天，報名前請留意。各館每天另有「親子自由探索」免費開放空間時段，未逐一列入本表，館內開放即可入場，請以該館現場公告為準。<br><br>
+  資料存放在 <code>data.json</code>，此網站為靜態網頁，任何人不用登入、不用帳號都能直接瀏覽。
+</footer>
+
+<script>
+
+let activities = [];
+let lastUpdated = "2026/07/25";
+
+// 各館報名開放規則（依台北育兒網公告；每月固定日中午12:30開放）
+const REG_RULES = {
+  "大同親子館": {type:"fixed", label:"每月22日 12:30"},
+  "中山親子館": {type:"fixed", label:"每月22日 12:30"},
+  "中正親子館": {type:"fixed", label:"每月24日 12:30"},
+  "南港親子館": {type:"fixed", label:"每月20日 12:30"},
+  "信義親子館": {type:"fixed", label:"每月24日 12:30"},
+  "松山親子館": {type:"fixed", label:"每月26日 12:30"},
+  "內湖親子館": {type:"fixed", label:"每月19日 12:30"},
+  "文山親子館": {type:"fixed", label:"每月7日、23日 12:30"},
+  "北投親子館": {type:"fixed", label:"每月9日、25日 12:30"},
+  "士林親子館": {type:"fixed", label:"每月23日 12:30"},
+  "廣慈親子館": {type:"fixed", label:"每月25日 12:30"},
+  "萬華親子館": {type:"split", firstHalfLabel:"前月26日 12:30開放", secondHalfLabel:"當月10日 12:30開放"},
+  "大安親子館": {type:"split", firstHalfLabel:"前月21日 12:30開放", secondHalfLabel:"當月10日 12:30開放"}
+};
+
+function regLabelFor(activity){
+  const rule = REG_RULES[activity.center];
+  if(rule){
+    if(rule.type === "fixed") return rule.label;
+    if(rule.type === "split"){
+      const day = parseInt(String(activity.date).split("/")[1], 10) || 0;
+      return day <= 15 ? rule.firstHalfLabel : rule.secondHalfLabel;
+    }
+  }
+  if((activity.city||"台北市") === "新北市"){
+    return "每月15日 12:00（新北市親子館統一規則，繳費須於報名後2-4個開館日內完成）";
+  }
+  return "依當月公告為準";
+}
+let selectedWeekdays = new Set();
+let selectedCenters = new Set();
+let selectedCities = new Set();
+let selectedMethods = new Set();
+let ageMonths = 24;
+let adultOnlyMode = false;
+let noAgeMode = false;
+
+const WEEKDAYS = ["一","二","三","四","五","六","日"];
+const METHODS = ["網路","現場","電話","其他"];
+
+function ageLabel(m){
+  if(m < 12) return m + "個月";
+  const y = Math.floor(m/12);
+  const rem = m % 12;
+  return rem===0 ? (y+"歲") : (y+"歲"+rem+"個月");
+}
+
+async function fetchData(){
+  try{
+    const res = await fetch('./data.json', {cache: 'no-store'});
+    const json = await res.json();
+    activities = json.activities || [];
+    if(json.lastUpdated) lastUpdated = json.lastUpdated;
+  }catch(e){
+    console.error('讀取 data.json 失敗', e);
+    activities = [];
+  }
+}
+
+function daysBetween(dateStr){
+  // dateStr format YYYY/MM/DD
+  const parts = dateStr.split("/").map(Number);
+  const d = new Date(parts[0], parts[1]-1, parts[2]);
+  const now = new Date();
+  const diffMs = now.setHours(0,0,0,0) - d.setHours(0,0,0,0);
+  return Math.round(diffMs / (1000*60*60*24));
+}
+
+function renderStatusBar(){
+  const updatedPill = document.getElementById("updatedPill");
+  const daysAgo = daysBetween(lastUpdated);
+  let updatedText = "資料更新於：" + lastUpdated;
+  if(daysAgo <= 0) updatedText += "（今天）";
+  else updatedText += `（${daysAgo}天前）`;
+  updatedPill.textContent = updatedText;
+  updatedPill.className = "status-pill" + (daysAgo >= 14 ? " stale" : "");
+}
+
+function buildFilterChips(){
+  const CITIES = [...new Set(activities.map(a=>a.city || "台北市"))];
+  const visibleActivities = selectedCities.size===0 ? activities : activities.filter(a=>selectedCities.has(a.city||"台北市"));
+  const CENTERS = [...new Set(visibleActivities.map(a=>a.center))];
+
+  const cyBox = document.getElementById("cityChips");
+  cyBox.innerHTML = "";
+  CITIES.forEach(city=>{
+    const b = document.createElement("button");
+    b.className = "chip" + (selectedCities.has(city) ? " active" : "");
+    b.textContent = city;
+    b.onclick = ()=>{
+      if(selectedCities.has(city)) selectedCities.delete(city); else selectedCities.add(city);
+      // drop center selections that no longer belong to visible cities
+      const stillVisible = new Set(
+        (selectedCities.size===0 ? activities : activities.filter(a=>selectedCities.has(a.city||"台北市")))
+        .map(a=>a.center)
+      );
+      selectedCenters = new Set([...selectedCenters].filter(c=>stillVisible.has(c)));
+      buildFilterChips();
+      render();
+    };
+    cyBox.appendChild(b);
+  });
+
+  const wkBox = document.getElementById("weekdayChips");
+  wkBox.innerHTML = "";
+  WEEKDAYS.forEach(w=>{
+    const b = document.createElement("button");
+    b.className = "chip" + (selectedWeekdays.has(w) ? " active" : "");
+    b.textContent = "週"+w;
+    b.onclick = ()=>{
+      if(selectedWeekdays.has(w)) selectedWeekdays.delete(w); else selectedWeekdays.add(w);
+      buildFilterChips();
+      render();
+    };
+    wkBox.appendChild(b);
+  });
+
+  const ctBox = document.getElementById("centerChips");
+  ctBox.innerHTML = "";
+  CENTERS.forEach(c=>{
+    const b = document.createElement("button");
+    b.className = "chip" + (selectedCenters.has(c) ? " active" : "");
+    b.textContent = c.replace("親子館","");
+    b.onclick = ()=>{
+      if(selectedCenters.has(c)) selectedCenters.delete(c); else selectedCenters.add(c);
+      buildFilterChips();
+      render();
+    };
+    ctBox.appendChild(b);
+  });
+
+  const mtBox = document.getElementById("methodChips");
+  mtBox.innerHTML = "";
+  METHODS.forEach(m=>{
+    const b = document.createElement("button");
+    b.className = "chip" + (selectedMethods.has(m) ? " active" : "");
+    b.textContent = m;
+    b.onclick = ()=>{
+      if(selectedMethods.has(m)) selectedMethods.delete(m); else selectedMethods.add(m);
+      buildFilterChips();
+      render();
+    };
+    mtBox.appendChild(b);
+  });
+
+  document.getElementById("subLine").textContent =
+    "選城市、孩子年齡、星期幾，篩出適合報名的活動。目前收錄："+CITIES.join("、")+"　共"+CENTERS.length+"館、"+activities.length+"筆活動。";
+}
+
+const methodClass = {"網路":"method-net","現場":"method-onsite","電話":"method-phone","其他":""};
+const methodIcon = {"網路":"★","現場":"●","電話":"🟠","其他":"—"};
+
+function render(){
+  let list = activities.filter(a=>{
+    if(selectedCities.size>0 && !selectedCities.has(a.city||"台北市")) return false;
+    if(selectedWeekdays.size>0 && !selectedWeekdays.has(a.weekday)) return false;
+    if(selectedCenters.size>0 && !selectedCenters.has(a.center)) return false;
+    if(selectedMethods.size>0 && !selectedMethods.has(a.method)) return false;
+    if(adultOnlyMode){
+      return a.adultOnly;
+    } else {
+      if(a.adultOnly) return false;
+      if(noAgeMode) return true;
+      return ageMonths >= a.ageMin && ageMonths <= a.ageMax;
+    }
+  });
+
+  list.sort((a,b)=>{
+    const da = parseInt(String(a.date).split("/")[1],10) || 0;
+    const db = parseInt(String(b.date).split("/")[1],10) || 0;
+    return da-db;
+  });
+
+  document.getElementById("resultCount").textContent = `符合 ${list.length} 場活動`;
+
+  const box = document.getElementById("results");
+  box.innerHTML = "";
+  if(list.length===0){
+    box.innerHTML = '<div class="empty">目前條件沒有符合的活動，試試調整年齡或星期範圍。</div>';
+    return;
+  }
+  list.forEach(a=>{
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <div class="card-top">
+        <div>
+          <div class="aname">${a.name}</div>
+          <div class="meta">${a.time}${a.note? ' · '+a.note : ''}</div>
+          <div class="badges">
+            <span class="badge center" style="background:#e3edf9;color:#3a6ea8;">${(a.city||'台北市')}</span>
+            <span class="badge center">${a.center.replace('親子館','')}</span>
+            <span class="badge ${methodClass[a.method]||''}">${methodIcon[a.method]||''} ${a.method}報名</span>
+            <span class="badge reg">📅 ${regLabelFor(a)}</span>
+            ${a.adultOnly? '<span class="badge adult">純大人</span>' : `<span class="badge center" style="background:#eef0e8;color:#5c6b45;">${a.ageMax>=999?'不限年齡':ageLabel(a.ageMin)+'–'+ageLabel(a.ageMax)}</span>`}
+          </div>
+        </div>
+        <div class="date-tag">
+          <div class="date-num">${a.date}</div>
+          <div class="date-week">週${a.weekday}</div>
+        </div>
+      </div>
+    `;
+    box.appendChild(div);
+  });
+}
+
+// age slider
+const slider = document.getElementById("ageSlider");
+const ageOut = document.getElementById("ageOut");
+slider.addEventListener("input", ()=>{
+  ageMonths = parseInt(slider.value,10);
+  ageOut.textContent = ageLabel(ageMonths);
+  render();
+});
+
+// no-age toggle
+const noAgeToggle = document.getElementById("noAgeToggle");
+noAgeToggle.addEventListener("change", ()=>{
+  noAgeMode = noAgeToggle.checked;
+  slider.disabled = noAgeMode || adultOnlyMode;
+  if(noAgeMode && adultOnlyMode){
+    adultOnlyMode = false;
+    adultToggle.checked = false;
+  }
+  render();
+});
+
+// adult toggle
+const adultToggle = document.getElementById("adultToggle");
+adultToggle.addEventListener("change", ()=>{
+  adultOnlyMode = adultToggle.checked;
+  if(adultOnlyMode && noAgeMode){
+    noAgeMode = false;
+    noAgeToggle.checked = false;
+  }
+  slider.disabled = adultOnlyMode || noAgeMode;
+  render();
+});
+
+(async function init(){
+  await fetchData();
+  buildFilterChips();
+  renderStatusBar();
+  ageOut.textContent = ageLabel(ageMonths);
+  render();
+})();
+</script>
+
+</body>
+</html>
