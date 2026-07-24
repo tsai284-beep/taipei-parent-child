@@ -392,10 +392,27 @@ function renderStatusBar(){
   updatedPill.className = "status-pill" + (daysAgo >= 14 ? " stale" : "");
 }
 
+const CENTER_ORDER = [
+  "大同親子館","中山親子館","萬華親子館","中正親子館","南港親子館","信義親子館",
+  "內湖親子館","文山親子館","松山親子館","北投親子館","廣慈親子館","士林親子館","大安親子館",
+  "永和網溪親子館","永和中興親子館",
+  "中和錦和親子館","中和南勢角親子館","中和連城親子館","中和青年宅親子館","中和民享親子館","中和景新親子館"
+];
+function sortByCenterOrder(list){
+  return list.slice().sort((a,b)=>{
+    const ia = CENTER_ORDER.indexOf(a);
+    const ib = CENTER_ORDER.indexOf(b);
+    if(ia===-1 && ib===-1) return a.localeCompare(b);
+    if(ia===-1) return 1;
+    if(ib===-1) return -1;
+    return ia-ib;
+  });
+}
+
 function buildFilterChips(){
   const CITIES = [...new Set(activities.map(a=>a.city || "台北市"))];
   const visibleActivities = selectedCities.size===0 ? activities : activities.filter(a=>selectedCities.has(a.city||"台北市"));
-  const CENTERS = [...new Set(visibleActivities.map(a=>a.center))];
+  const CENTERS = sortByCenterOrder([...new Set(visibleActivities.map(a=>a.center))]);
 
   const cyBox = document.getElementById("cityChips");
   cyBox.innerHTML = "";
