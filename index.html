@@ -331,7 +331,7 @@ function regLabelFor(activity){
     }
   }
   if((activity.city||"台北市") === "新北市"){
-    return "每月15日 12:00（新北市親子館統一規則，繳費須於報名後2-4個開館日內完成）";
+    return "每月15日 12:00開放";
   }
   return "依當月公告為準";
 }
@@ -496,7 +496,7 @@ function render(){
     div.innerHTML = `
       <div class="card-top">
         <div>
-          <div class="aname">${a.name.replace(/[（(][^（）()]*[）)]/g, '').trim()}</div>
+          <div class="aname">${a.name.replace(/[（(【][^（）()【】]*[）)】]/g, '').trim()}</div>
           <div class="meta">${a.time}${a.note? ' · '+a.note : ''}</div>
           <div class="badges">
             <span class="badge center" style="background:#e3edf9;color:#3a6ea8;">${(a.city||'台北市')}</span>
