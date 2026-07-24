@@ -502,7 +502,7 @@ function render(){
     div.innerHTML = `
       <div class="card-top">
         <div>
-          <div class="aname">${a.name.replace(/[（(【][^（）()【】]*[）)】]/g, '').trim()}</div>
+          <div class="aname">${(a.name || '未命名活動').replace(/[（(【][^（）()【】]*[）)】]/g, '').trim() || '未命名活動'}</div>
           <div class="meta">${a.time}${a.note? ' · '+a.note : ''}</div>
           <div class="badges">
             <span class="badge center" style="background:#e3edf9;color:#3a6ea8;">${(a.city||'台北市')}</span>
