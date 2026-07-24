@@ -266,11 +266,6 @@
 </header>
 
 <main>
-  <details>
-    <summary>ℹ️ 如何更新這份資料</summary>
-    <div class="hint">這個網站的活動資料存在同資料夾的 <code>data.json</code> 檔案裡。要更新資料，回到 GitHub 上編輯 <code>data.json</code>、貼上新內容、按 Commit 儲存即可，網站會在幾分鐘內自動更新，網址不會改變。</div>
-  </details>
-
   <div class="filter-block">
     <div class="filter-label">🏙️ 城市</div>
     <div class="chip-row" id="cityChips"></div>
@@ -281,6 +276,7 @@
     <div class="toggle-row">
       <label><input type="checkbox" id="noAgeToggle"> 不限定年齡（顯示所有年齡層活動）</label>
       <label><input type="checkbox" id="adultToggle"> 只看純大人活動</label>
+      <label><input type="checkbox" id="availOnlyToggle"> 🎟️ 只看還有名額</label>
     </div>
 
     <div class="filter-label" style="margin-top:16px;">📅 星期幾</div>
@@ -306,7 +302,7 @@
 <script>
 
 let activities = [];
-let lastUpdated = "2026/07/25";
+let lastUpdated = "2026/07/25 12:00";
 
 // 各館報名開放規則（依台北育兒網公告；每月固定日中午12:30開放）
 const REG_RULES = {
@@ -346,6 +342,7 @@ let selectedMethods = new Set();
 let ageMonths = 24;
 let adultOnlyMode = false;
 let noAgeMode = false;
+let availOnlyMode = false;
 
 const WEEKDAYS = ["一","二","三","四","五","六","日"];
 const METHODS = ["網路","現場","電話","其他"];
@@ -369,9 +366,10 @@ async function fetchData(){
   }
 }
 
-function daysBetween(dateStr){
-  // dateStr format YYYY/MM/DD
-  const parts = dateStr.split("/").map(Number);
+function daysBetween(dateTimeStr){
+  // dateTimeStr format "YYYY/MM/DD" or "YYYY/MM/DD HH:MM"
+  const datePart = String(dateTimeStr).split(" ")[0];
+  const parts = datePart.split("/").map(Number);
   const d = new Date(parts[0], parts[1]-1, parts[2]);
   const now = new Date();
   const diffMs = now.setHours(0,0,0,0) - d.setHours(0,0,0,0);
@@ -468,6 +466,7 @@ function render(){
     if(selectedWeekdays.size>0 && !selectedWeekdays.has(a.weekday)) return false;
     if(selectedCenters.size>0 && !selectedCenters.has(a.center)) return false;
     if(selectedMethods.size>0 && !selectedMethods.has(a.method)) return false;
+    if(availOnlyMode && a.note && a.note.includes("額滿")) return false;
     if(adultOnlyMode){
       return a.adultOnly;
     } else {
@@ -497,7 +496,7 @@ function render(){
     div.innerHTML = `
       <div class="card-top">
         <div>
-          <div class="aname">${a.name}</div>
+          <div class="aname">${a.name.replace(/[（(][^（）()]*[）)]/g, '').trim()}</div>
           <div class="meta">${a.time}${a.note? ' · '+a.note : ''}</div>
           <div class="badges">
             <span class="badge center" style="background:#e3edf9;color:#3a6ea8;">${(a.city||'台北市')}</span>
@@ -547,6 +546,12 @@ adultToggle.addEventListener("change", ()=>{
     noAgeToggle.checked = false;
   }
   slider.disabled = adultOnlyMode || noAgeMode;
+  render();
+});
+
+const availOnlyToggle = document.getElementById("availOnlyToggle");
+availOnlyToggle.addEventListener("change", ()=>{
+  availOnlyMode = availOnlyToggle.checked;
   render();
 });
 
