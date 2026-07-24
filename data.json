@@ -1,5 +1,5 @@
 {
- "lastUpdated": "2026/07/24 18:30",
+ "lastUpdated": "2026/07/24 23:00",
  "activities": [
   {
    "city": "台北市",
@@ -1094,7 +1094,7 @@
    "ageMax": 71,
    "adultOnly": false,
    "method": "其他",
-   "note": "名額3人；狀態：報名開放中"
+   "note": "名額3人；狀態：報名開放中，剩餘3人"
   },
   {
    "city": "台北市",
@@ -1107,7 +1107,7 @@
    "ageMax": 71,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額8人；狀態：報名額滿"
+   "note": "名額8人；狀態：報名開放中，剩餘2人"
   },
   {
    "city": "台北市",
@@ -1185,7 +1185,7 @@
    "ageMax": 29,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額8人；狀態：報名開放中，剩餘7人"
+   "note": "名額8人；狀態：報名開放中，剩餘5人"
   },
   {
    "city": "台北市",
@@ -1198,7 +1198,7 @@
    "ageMax": 71,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額10人；狀態：報名開放中"
+   "note": "名額10人；狀態：報名開放中，剩餘4人"
   },
   {
    "city": "台北市",
@@ -1237,7 +1237,7 @@
    "ageMax": 11,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額8人；狀態：報名開放中"
+   "note": "名額8人；狀態：報名開放中，剩餘8人"
   },
   {
    "city": "台北市",
@@ -1250,7 +1250,7 @@
    "ageMax": 23,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額8人；狀態：報名開放中"
+   "note": "名額8人；狀態：報名開放中，剩餘7人"
   },
   {
    "city": "台北市",
@@ -1263,7 +1263,7 @@
    "ageMax": 47,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額10人；狀態：報名開放中"
+   "note": "名額10人；狀態：報名開放中，剩餘13人"
   },
   {
    "city": "台北市",
@@ -1276,7 +1276,7 @@
    "ageMax": 71,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額15人；狀態：報名開放中"
+   "note": "名額15人；狀態：報名開放中，剩餘13人"
   },
   {
    "city": "台北市",
@@ -1289,7 +1289,7 @@
    "ageMax": 29,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額8人；狀態：報名開放中"
+   "note": "名額8人；狀態：報名開放中，剩餘8人"
   },
   {
    "city": "台北市",
@@ -1302,7 +1302,7 @@
    "ageMax": 71,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額10人；狀態：報名開放中"
+   "note": "名額10人；狀態：報名開放中，剩餘3人"
   },
   {
    "city": "台北市",
@@ -1315,7 +1315,7 @@
    "ageMax": 11,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額8人；狀態：報名開放中"
+   "note": "名額8人；狀態：報名開放中，剩餘3人"
   },
   {
    "city": "台北市",
@@ -1328,7 +1328,7 @@
    "ageMax": 23,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額8人；狀態：報名開放中"
+   "note": "名額8人；狀態：報名額滿"
   },
   {
    "city": "台北市",
@@ -1354,7 +1354,7 @@
    "ageMax": 71,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額10人；狀態：報名開放中"
+   "note": "名額10人；狀態：報名開放中，剩餘9人"
   },
   {
    "city": "台北市",
@@ -1393,7 +1393,7 @@
    "ageMax": 71,
    "adultOnly": false,
    "method": "網路",
-   "note": "名額10人；狀態：報名開放中"
+   "note": "名額10人；狀態：報名開放中，剩餘7人"
   },
   {
    "city": "台北市",
@@ -3670,58 +3670,6 @@
   {
    "city": "新北市",
    "center": "中和錦和親子館",
-   "date": "8/7",
-   "weekday": "五",
-   "name": "音樂感統（饅頭老師）",
-   "time": "10:00-11:00",
-   "ageMin": 18,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/14",
-   "weekday": "五",
-   "name": "塗鴉創作美勞（鴨子老師）",
-   "time": "11:00-12:00",
-   "ageMin": 18,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/8",
-   "weekday": "六",
-   "name": "莫兒方遊戲積木（瓶子老師）",
-   "time": "10:00-11:00",
-   "ageMin": 30,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/1",
-   "weekday": "六",
-   "name": "假日聽故事學圍棋（Yoyo老師）",
-   "time": "13:30-14:30",
-   "ageMin": 48,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
    "date": "8/4",
    "weekday": "二",
    "name": "【特色】職業小任務",
@@ -3730,72 +3678,7 @@
    "ageMax": 83,
    "adultOnly": false,
    "method": "網路",
-   "note": "免費"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/25",
-   "weekday": "二",
-   "name": "熊果搬搬樂：我是小小運動員",
-   "time": "11:00-12:00",
-   "ageMin": 15,
-   "ageMax": 48,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "免費"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/1",
-   "weekday": "六",
-   "name": "【親職活動】成長不遲到！七感遊戲教養談幼兒發展",
-   "time": "10:00-12:00",
-   "ageMin": 0,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "免費（全程參與可退費100元）"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/11",
-   "weekday": "二",
-   "name": "寶寶親子體能（奶茶老師）",
-   "time": "10:00-11:00",
-   "ageMin": 13,
-   "ageMax": 48,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/11",
-   "weekday": "二",
-   "name": "五感故事屋（小菜老師）",
-   "time": "11:00-12:00",
-   "ageMin": 12,
-   "ageMax": 42,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費150元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/2",
-   "weekday": "日",
-   "name": "【免費親職活動】小身體大能量・親子樂運動",
-   "time": "09:00-10:00",
-   "ageMin": 22,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "免費"
+   "note": "名額15人；免費；狀態：報名開放中，剩餘15人"
   },
   {
    "city": "新北市",
@@ -3813,84 +3696,6 @@
   {
    "city": "新北市",
    "center": "中和錦和親子館",
-   "date": "8/4",
-   "weekday": "二",
-   "name": "快樂體適能（奶茶老師）",
-   "time": "10:00-11:00",
-   "ageMin": 18,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/5",
-   "weekday": "三",
-   "name": "親子黏土手作（獅獅老師）",
-   "time": "10:00-11:00",
-   "ageMin": 24,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費150元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/6",
-   "weekday": "四",
-   "name": "親子遊戲瑜珈（小麥老師）",
-   "time": "10:00-11:00",
-   "ageMin": 17,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/6",
-   "weekday": "四",
-   "name": "小寶瑜珈（小麥老師）",
-   "time": "11:00-12:00",
-   "ageMin": 0,
-   "ageMax": 16,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/13",
-   "weekday": "四",
-   "name": "寶寶捏捏樂（真真老師・爺奶專屬場）",
-   "time": "10:00-11:00",
-   "ageMin": 9,
-   "ageMax": 48,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費150元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/12",
-   "weekday": "三",
-   "name": "墊上運動（布丁老師）",
-   "time": "13:30-14:30",
-   "ageMin": 18,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
    "date": "8/16",
    "weekday": "日",
    "name": "假日墊上運動（布丁老師）",
@@ -3900,71 +3705,6 @@
    "adultOnly": false,
    "method": "網路",
    "note": "自費100元，共3場"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/18",
-   "weekday": "二",
-   "name": "快樂體適能：勇闖障礙賽（滾筒）",
-   "time": "10:00-11:00",
-   "ageMin": 18,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/18",
-   "weekday": "二",
-   "name": "Lasy親子故事積木（沙拉老師）",
-   "time": "11:00-12:00",
-   "ageMin": 20,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/30",
-   "weekday": "日",
-   "name": "桌遊探險樂園（小菜老師）",
-   "time": "11:00-12:00",
-   "ageMin": 42,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費150元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/29",
-   "weekday": "六",
-   "name": "學台語做點心（金針菇老師）",
-   "time": "10:00-11:00",
-   "ageMin": 18,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
-  },
-  {
-   "city": "新北市",
-   "center": "中和錦和親子館",
-   "date": "8/29",
-   "weekday": "六",
-   "name": "魔法小學堂（周周老師）",
-   "time": "11:00-12:00",
-   "ageMin": 36,
-   "ageMax": 83,
-   "adultOnly": false,
-   "method": "網路",
-   "note": "自費100元"
   },
   {
    "city": "新北市",
@@ -5109,6 +4849,630 @@
    "adultOnly": false,
    "method": "網路",
    "note": "自費100元"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/1",
+   "weekday": "六",
+   "name": "成長不遲到！七感遊戲教養談幼兒發展",
+   "time": "10:00-12:00",
+   "ageMin": 0,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額20人；免費；狀態：報名開放中，剩餘19人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/1",
+   "weekday": "六",
+   "name": "型態與弱點（大眼睛型態）",
+   "time": "13:30-14:30",
+   "ageMin": 48,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額12人；自費100元；狀態：報名開放中，剩餘7人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/1",
+   "weekday": "六",
+   "name": "公雞的新鄰居",
+   "time": "14:30-15:30",
+   "ageMin": 30,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費150元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/2",
+   "weekday": "日",
+   "name": "小身體大能量 親子樂運動",
+   "time": "09:00-10:00",
+   "ageMin": 22,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；免費；狀態：報名額滿"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/2",
+   "weekday": "日",
+   "name": "動動體適能B",
+   "time": "10:00-11:00",
+   "ageMin": 22,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名額滿"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/2",
+   "weekday": "日",
+   "name": "動動體適能C",
+   "time": "11:00-12:00",
+   "ageMin": 22,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名額滿"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/4",
+   "weekday": "二",
+   "name": "左點右點(足球)",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘15人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/5",
+   "weekday": "三",
+   "name": "好熱喔～來個冰淇淋",
+   "time": "10:00-11:00",
+   "ageMin": 24,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費150元；狀態：報名開放中，剩餘15人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/5",
+   "weekday": "三",
+   "name": "【特色】職業小任務",
+   "time": "11:00-12:00",
+   "ageMin": 0,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；免費；狀態：報名開放中，剩餘15人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/6",
+   "weekday": "四",
+   "name": "Aloha",
+   "time": "10:00-11:00",
+   "ageMin": 17,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/6",
+   "weekday": "四",
+   "name": "夏威夷",
+   "time": "11:00-12:00",
+   "ageMin": 0,
+   "ageMax": 16,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費100元；狀態：報名開放中，剩餘15人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/7",
+   "weekday": "五",
+   "name": "颱風",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘15人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/7",
+   "weekday": "五",
+   "name": "寶寶塗鴉",
+   "time": "11:00-12:00",
+   "ageMin": 13,
+   "ageMax": 48,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費100元；狀態：報名開放中，剩餘15人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/8",
+   "weekday": "六",
+   "name": "救援小車",
+   "time": "10:00-11:00",
+   "ageMin": 30,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額14人；自費100元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/9",
+   "weekday": "日",
+   "name": "世界原來這麼大",
+   "time": "10:00-11:00",
+   "ageMin": 22,
+   "ageMax": 60,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費150元；狀態：報名開放中，剩餘4人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/9",
+   "weekday": "日",
+   "name": "你看起來真好吃",
+   "time": "11:00-12:00",
+   "ageMin": 30,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費150元；狀態：報名開放中，剩餘9人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/11",
+   "weekday": "二",
+   "name": "七彩微風(彩色輪胎)",
+   "time": "10:00-11:00",
+   "ageMin": 13,
+   "ageMax": 48,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費100元；狀態：報名開放中，剩餘12人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/11",
+   "weekday": "二",
+   "name": "蔬菜家族的秘密",
+   "time": "11:00-12:00",
+   "ageMin": 12,
+   "ageMax": 42,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費150元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/12",
+   "weekday": "三",
+   "name": "墊上運動",
+   "time": "13:30-14:30",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/13",
+   "weekday": "四",
+   "name": "【爺奶專屬場】可愛的小腳ㄚ子",
+   "time": "10:00-11:00",
+   "ageMin": 9,
+   "ageMax": 48,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費150元；狀態：報名開放中，剩餘12人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/14",
+   "weekday": "五",
+   "name": "士兵進行曲",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘13人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/14",
+   "weekday": "五",
+   "name": "塗鴉創作美勞",
+   "time": "11:00-12:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘13人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/15",
+   "weekday": "六",
+   "name": "瑪莉歐的食人花",
+   "time": "10:00-11:00",
+   "ageMin": 24,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費150元；狀態：報名開放中，剩餘9人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/15",
+   "weekday": "六",
+   "name": "貓熊",
+   "time": "11:00-12:00",
+   "ageMin": 24,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費150元；狀態：報名開放中，剩餘9人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/16",
+   "weekday": "日",
+   "name": "墊上運動A",
+   "time": "09:00-10:00",
+   "ageMin": 30,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘2人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/16",
+   "weekday": "日",
+   "name": "墊上運動B",
+   "time": "10:00-11:00",
+   "ageMin": 30,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名額滿"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/16",
+   "weekday": "日",
+   "name": "墊上運動C",
+   "time": "11:00-12:00",
+   "ageMin": 30,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名額滿"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/18",
+   "weekday": "二",
+   "name": "勇闖障礙賽(滾筒)",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘11人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/18",
+   "weekday": "二",
+   "name": "前面還有什麼車",
+   "time": "11:00-12:00",
+   "ageMin": 20,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘11人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/19",
+   "weekday": "三",
+   "name": "墊上運動",
+   "time": "13:30-14:30",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/20",
+   "weekday": "四",
+   "name": "跟小紅船說再見",
+   "time": "10:00-11:00",
+   "ageMin": 17,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘12人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/20",
+   "weekday": "四",
+   "name": "海邊渡假",
+   "time": "11:00-12:00",
+   "ageMin": 0,
+   "ageMax": 16,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費100元；狀態：報名開放中，剩餘15人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/21",
+   "weekday": "五",
+   "name": "小雞吃米",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘10人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/21",
+   "weekday": "五",
+   "name": "寶寶塗鴉",
+   "time": "11:00-12:00",
+   "ageMin": 13,
+   "ageMax": 48,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費100元；狀態：報名開放中，剩餘11人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/22",
+   "weekday": "六",
+   "name": "好甜的西瓜",
+   "time": "10:00-11:00",
+   "ageMin": 30,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費150元；狀態：報名開放中，剩餘10人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/22",
+   "weekday": "六",
+   "name": "重要的抉擇（破眼與圍地）",
+   "time": "13:30-14:30",
+   "ageMin": 48,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額12人；自費100元；狀態：報名開放中，剩餘7人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/23",
+   "weekday": "日",
+   "name": "繪本感統-小草長大囉～",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名額滿"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/23",
+   "weekday": "日",
+   "name": "奧福音樂-小草的春天（驚愕交響曲）",
+   "time": "11:00-12:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘9人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/25",
+   "weekday": "二",
+   "name": "同心協力(聯結車)",
+   "time": "10:00-11:00",
+   "ageMin": 13,
+   "ageMax": 48,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費100元；狀態：報名開放中，剩餘12人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/25",
+   "weekday": "二",
+   "name": "熊果搬搬樂-我是小小運動員",
+   "time": "11:00-12:00",
+   "ageMin": 15,
+   "ageMax": 48,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；免費；狀態：報名開放中，剩餘12人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/26",
+   "weekday": "三",
+   "name": "【特色】職業小任務",
+   "time": "10:00-11:00",
+   "ageMin": 0,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；免費；狀態：報名開放中，剩餘11人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/26",
+   "weekday": "三",
+   "name": "墊上運動",
+   "time": "13:30-14:30",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/28",
+   "weekday": "五",
+   "name": "母雞孵蛋",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘12人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/28",
+   "weekday": "五",
+   "name": "塗鴉創作美勞",
+   "time": "11:00-12:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘12人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/29",
+   "weekday": "六",
+   "name": "狗仔(狗仔餅)",
+   "time": "10:00-11:00",
+   "ageMin": 18,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘14人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/29",
+   "weekday": "六",
+   "name": "超能力-紙",
+   "time": "11:00-12:00",
+   "ageMin": 36,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費100元；狀態：報名開放中，剩餘10人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/30",
+   "weekday": "日",
+   "name": "騎著恐龍去上學",
+   "time": "10:00-11:00",
+   "ageMin": 20,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額16人；自費100元；狀態：報名開放中，剩餘13人"
+  },
+  {
+   "city": "新北市",
+   "center": "中和錦和親子館",
+   "date": "8/30",
+   "weekday": "日",
+   "name": "老鼠村的起司派對",
+   "time": "11:00-12:00",
+   "ageMin": 42,
+   "ageMax": 83,
+   "adultOnly": false,
+   "method": "網路",
+   "note": "名額15人；自費150元；狀態：報名開放中，剩餘13人"
   }
  ]
 }
